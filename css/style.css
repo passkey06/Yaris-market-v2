@@ -1,780 +1,179 @@
-/* ===================================================
-   YARIŞ MARKET v2
-   STYLE.CSS
-=================================================== */
-
-:root{
-
---primary:#0B6B3A;
---secondary:#FF8A00;
---background:#F5F5F5;
---card:#FFFFFF;
---text:#222222;
---gray:#777777;
---radius:18px;
-
-}
-
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-
 }
 
 body{
-
-background:var(--background);
-color:var(--text);
-padding-bottom:140px;
-
+background:#f5f6f8;
+color:#222;
+padding-bottom:90px;
 }
-
-a{
-
-text-decoration:none;
-color:inherit;
-
-}
-
-img{
-
-max-width:100%;
-display:block;
-
-}
-
-/* =========================
-HEADER
-========================= */
 
 .header{
-
-height:75px;
-background:var(--primary);
+height:70px;
+background:#0d7c45;
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:0 18px;
+justify-content:space-between;
+padding:0 15px;
 color:white;
 position:sticky;
 top:0;
-z-index:999;
-box-shadow:0 4px 12px rgba(0,0,0,.15);
-
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 .logoArea{
-
 display:flex;
 align-items:center;
-gap:12px;
-
+gap:10px;
 }
 
 .logoArea img{
-
-width:55px;
-height:55px;
-border-radius:15px;
-background:white;
-padding:6px;
-
+width:60px;
+height:60px;
+object-fit:contain;
 }
 
-.logoArea h1{
-
-font-size:22px;
-font-weight:700;
-
+.logoArea h2{
+font-size:18px;
+font-weight:600;
 }
 
 .logoArea p{
-
 font-size:12px;
 opacity:.9;
-
 }
 
-.menuButton,
-.profileButton{
-
-font-size:22px;
+.menuBtn,
+.profileBtn{
+background:none;
+border:none;
+color:white;
+font-size:24px;
 cursor:pointer;
-
 }
-
-/* =========================
-SEARCH
-========================= */
 
 .searchArea{
-
-padding:18px;
-
-}
-
-.searchBox{
-
-background:white;
-display:flex;
-align-items:center;
-padding:15px 18px;
-border-radius:16px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
-
-}
-
-.searchBox i{
-
-color:#999;
-margin-right:12px;
-
-}
-
-.searchBox input{
-
-border:none;
-outline:none;
-width:100%;
-font-size:16px;
-
-  
-}
-
-/* =========================
-   KAMPANYA SLIDER
-========================= */
-
-.slider{
-    padding:0 18px 18px;
-}
-
-.banner{
-    background:linear-gradient(135deg,#0B6B3A,#16954f);
-    border-radius:22px;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    overflow:hidden;
-    color:white;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.bannerText h2{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.bannerText p{
-    font-size:15px;
-    margin-bottom:18px;
-    opacity:.9;
-}
-
-.bannerText button{
-    background:#FF8A00;
-    color:white;
-    border:none;
-    border-radius:14px;
-    padding:14px 22px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.banner img{
-    width:160px;
-    object-fit:contain;
-}
-
-/* =========================
-   BİLGİ KARTLARI
-========================= */
-
-.info{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    padding:0 18px 20px;
-}
-
-.infoCard{
-    background:white;
-    border-radius:18px;
-    padding:18px 12px;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-
-.infoCard i{
-    font-size:26px;
-    color:#0B6B3A;
-    margin-bottom:10px;
-}
-
-.infoCard h3{
-    font-size:15px;
-    margin-bottom:5px;
-}
-
-.infoCard p{
-    font-size:13px;
-    color:#777;
-}
-
-/* =========================
-   BAŞLIKLAR
-========================= */
-
-.title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 18px 15px;
-}
-
-.title h2{
-    font-size:22px;
-    font-weight:700;
-}
-
-.title a{
-    color:#0B6B3A;
-    font-size:14px;
-    font-weight:600;
-}
-
-/* =========================
-   KATEGORİLER
-========================= */
-
-#categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    padding:0 18px 25px;
-}
-
-.category{
-    background:white;
-    border-radius:20px;
-    padding:18px 10px;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.25s;
-}
-
-.category:active{
-    transform:scale(.96);
-}
-
-.category img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    margin:auto;
-}
-
-.category h3{
-    margin-top:12px;
-    font-size:14px;
-    color:#222;
-}
-
-      /* =========================
-   ÜRÜN KARTLARI
-========================= */
-
-#campaignProducts,
-#products{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:16px;
-
-padding:0 18px 25px;
-
-}
-
-.product{
-
-background:white;
-
-border-radius:22px;
-
-overflow:hidden;
-
-box-shadow:0 6px 18px rgba(0,0,0,.08);
-
-position:relative;
-
-transition:.25s;
-
-}
-
-.product:active{
-
-transform:scale(.97);
-
-}
-
-.productImage{
-
-width:100%;
-
-height:170px;
-
-object-fit:cover;
-
-background:#fafafa;
-
-}
-
-.discount{
-
-position:absolute;
-
-top:12px;
-
-left:12px;
-
-background:#e53935;
-
-color:white;
-
-padding:6px 10px;
-
-border-radius:10px;
-
-font-size:12px;
-
-font-weight:600;
-
-}
-
-.favorite{
-
-position:absolute;
-
-top:12px;
-
-right:12px;
-
-width:38px;
-
-height:38px;
-
-background:white;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-box-shadow:0 3px 10px rgba(0,0,0,.15);
-
-font-size:18px;
-
-color:#999;
-
-cursor:pointer;
-
-}
-
-.favorite.active{
-
-color:#e53935;
-
-}
-
-.productBody{
-
 padding:15px;
-
 }
 
-.productName{
-
-font-size:17px;
-
-font-weight:600;
-
-margin-bottom:8px;
-
-height:45px;
-
-overflow:hidden;
-
-}
-
-.oldPrice{
-
-text-decoration:line-through;
-
-font-size:13px;
-
-color:#999;
-
-margin-bottom:2px;
-
-}
-
-.price{
-
-font-size:22px;
-
-font-weight:700;
-
-color:#0B6B3A;
-
-margin-bottom:14px;
-
-}
-
-.addCart{
-
+#searchInput{
 width:100%;
-
-background:#FF8A00;
-
-color:white;
-
+height:50px;
 border:none;
-
-padding:13px;
-
 border-radius:14px;
+padding:0 18px;
+font-size:16px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+outline:none;
+}
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px;
+margin:15px;
+background:linear-gradient(135deg,#0d7c45,#19a55a);
+border-radius:20px;
+color:#fff;
+}
 
-font-size:15px;
+.heroText{
+width:55%;
+}
 
+.heroText h1{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.heroText p{
+font-size:14px;
+margin-bottom:15px;
+}
+
+.heroText button{
+background:#fff;
+color:#0d7c45;
+border:none;
+padding:12px 20px;
+border-radius:12px;
 font-weight:600;
-
 cursor:pointer;
-
-transition:.2s;
-
 }
 
-.addCart:active{
-
-transform:scale(.97);
-
+.heroImage img{
+width:130px;
 }
 
-.addCart:hover{
-
-background:#f57c00;
-
+.infoCards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+padding:15px;
 }
 
-/* =========================
-   BOŞLUK
-========================= */
-
-.space{
-
-height:100px;
-
+.card{
+background:#fff;
+border-radius:16px;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
-/* =========================
-   SABİT SEPET ÇUBUĞU
-========================= */
+.card h3{
+   .categories,
+.campaigns,
+.products{
+padding:15px;
+}
 
-#cartBar{
+.categories h2,
+.campaigns h2,
+.products h2{
+margin-bottom:15px;
+font-size:20px;
+}
 
+.categoryGrid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.categoryCard,
+.productCard{
+background:#fff;
+border-radius:18px;
+padding:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.cartBar{
 position:fixed;
 left:15px;
 right:15px;
-bottom:80px;
-
-background:#0B6B3A;
-
-color:white;
-
-padding:18px;
-
-border-radius:20px;
-
+bottom:75px;
+background:#0d7c45;
+color:#fff;
+border-radius:18px;
+padding:15px;
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
-box-shadow:0 8px 25px rgba(0,0,0,.20);
-
-z-index:999;
-
-}
-
-.cartInfo{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-}
-
-.cartInfo h3{
-
-font-size:18px;
-
-margin-bottom:4px;
-
-}
-
-.cartInfo p{
-
-font-size:14px;
-
-opacity:.9;
-
-}
-
-#cartTotal{
-
-font-size:24px;
-
-font-weight:700;
-
-}
-
-#goCart{
-
-background:#FF8A00;
-
-color:white;
-
-border:none;
-
-padding:14px 20px;
-
-border-radius:15px;
-
-font-size:16px;
-
-font-weight:600;
-
-cursor:pointer;
-
-}
-
-/* =========================
-   ALT MENÜ
-========================= */
-
-.bottomMenu{
-
-position:fixed;
-
-left:0;
-right:0;
-bottom:0;
-
-height:72px;
-
-background:white;
-
-display:flex;
-
-justify-content:space-around;
-
-align-items:center;
-
-box-shadow:0 -4px 15px rgba(0,0,0,.12);
-
+box-shadow:0 8px 20px rgba(0,0,0,.20);
 z-index:1000;
-
 }
 
-.bottomMenu a{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:4px;
-
-font-size:12px;
-
-color:#777;
-
-}
-
-.bottomMenu a i{
-
-font-size:22px;
-
-}
-
-.bottomMenu .active{
-
-color:#0B6B3A;
-
+.cartBar button{
+background:#fff;
+color:#0d7c45;
+border:none;
+padding:12px 18px;
+border-radius:12px;
 font-weight:600;
-
-}
-
-/* =========================
-   SOL MENÜ
-========================= */
-
-#sideMenu{
-
-position:fixed;
-
-top:0;
-left:-290px;
-
-width:280px;
-height:100%;
-
-background:white;
-
-z-index:1200;
-
-transition:.30s;
-
-box-shadow:4px 0 18px rgba(0,0,0,.18);
-
-overflow:auto;
-
-}
-
-#sideMenu.active{
-
-left:0;
-
-}
-
-.menuHeader{
-
-background:#0B6B3A;
-
-padding:28px;
-
-color:white;
-
-}
-
-#sideMenu a{
-
-display:block;
-
-padding:18px 22px;
-
-font-size:16px;
-
-border-bottom:1px solid #eee;
-
-}
-
-#sideMenu a:hover{
-
-background:#f5f5f5;
-
-}
-
-/* =========================
-   KARARTMA
-========================= */
-
-#overlay{
-
-position:fixed;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.45);
-
-display:none;
-
-z-index:1100;
-
-}
-
-#overlay.active{
-
-display:block;
-
-}
-
-/* =========================
-   MOBİL
-========================= */
-
-@media(max-width:768px){
-
-.banner{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-.banner img{
-
-width:130px;
-
-margin-top:20px;
-
-}
-
-.info{
-
-grid-template-columns:1fr;
-
-}
-
-#categories{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-#campaignProducts,
-#products{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.productImage{
-
-height:140px;
-
-}
-
-.logoArea h1{
-
-font-size:18px;
-
-}
-
-.logoArea p{
-
-display:none;
-
-}
-
-}
+cursor
+   
